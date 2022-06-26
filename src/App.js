@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./components/common/Navbar";
+import Sidenav from "./components/common/Sidenav";
+import Layout from "./components/layout/Layout";
 
 const App = () => {
   return (
-    <div>
-      <h3 className="text-7xl">fsds</h3>
-    </div>
-  )
-}
+    <>
+    <Layout>
+      
+    </Layout>
+    </>
+  );
+};
 
-export default App
+export default App;
