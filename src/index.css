@@ -8,6 +8,11 @@
 }
 
 @layer components {
+  main,
+  header,
+  .navbar {
+    @apply lg:w-[calc(100%-80px)] lg:ml-[80px] w-full;
+  }
   .sidebarItem {
     @apply flex items-center justify-center py-8 hover:bg-[#2995DA] cursor-pointer;
   }
