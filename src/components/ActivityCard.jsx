@@ -2,7 +2,7 @@ import React from "react";
 
 export const ActivityCard = ({ data }) => {
   return (
-    <div className="bg-white shadow-teamCard lg:w-3/12 w-full">
+    <div className="bg-white shadow-teamCard col-span-1 xl:col-span-3">
       <div className="flex justify-between py-8 px-10 border-b-[1px] border-[#EFEFEF]">
         <h3 className="font-bold text-lg">Activity</h3>
       </div>

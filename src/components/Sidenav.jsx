@@ -3,7 +3,7 @@ import { Campaigns, Contact, Help, Logo, Reports, Teams } from "./Icons";
 
 const Sidenav = () => {
   return (
-    <div className="w-20 hidden md:flex flex-col justify-between h-full fixed shadow-md bg-[#042235]">
+    <div className="w-20 z-10 hidden lg:flex flex-col justify-between h-full fixed shadow-md bg-[#042235]">
       <ul>
         <li className="sidebarItem">
           <a href="#">

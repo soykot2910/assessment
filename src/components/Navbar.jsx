@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { MenuNotification } from "./Icons";
+import {  MenuNotification } from "./Icons";
 
 const Navbar = ({ userInfo }) => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
     <nav className="h-20 bg-white navbar shadow-navBar flex items-center justify-between px-4 lg:px-12 boder-b-[1px] border-[#E2E2E2]">
+
       <ul className="flex">
         <li className="pl-0 pr-5 py-6 border-r-[1px] border-[#E2E2E2]">
           <a className="text-lg text-[#1A1919]">NARWHAL</a>

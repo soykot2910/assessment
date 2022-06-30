@@ -1,3 +1,4 @@
+
 export const StarActive = () => (
   <svg
     width="17"

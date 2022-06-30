@@ -39,7 +39,7 @@ const App = () => {
           setSearchValue={setSearchValue}
         />
         <main className="p-5 lg:p-10 bg-[#E5E5E5]">
-          <div className="flex flex-wrap gap-6">
+          <div className="grid gap-4 grid-cols-1 xl:grid-cols-12">
             <TeamCard
               data={teamsData}
               activeItem={activeItem}

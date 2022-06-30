@@ -8,7 +8,7 @@ const TeamCard = ({ data, activeItem, searchValue, totalData }) => {
   }
 
   return (
-    <div className="bg-white shadow-teamCard w-full lg:w-8/12">
+    <div className="bg-white shadow-teamCard col-span-1 xl:col-span-9">
       <div className="flex justify-between py-8 px-10 border-b-[1px] border-[#EFEFEF]">
         <h3 className="font-bold text-lg">
           {activeItem.All
@@ -22,7 +22,7 @@ const TeamCard = ({ data, activeItem, searchValue, totalData }) => {
           Showing {totalData} out of {data.length} teams
         </p>
       </div>
-      <div className="py-8 px-10 grid lg:grid-cols-3 gap-4">
+      <div className="py-8 px-10 grid gap-4 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         {data.length > 0 ? (
           data.map((team) => <Card key={team.id} team={team} />)
         ) : (
