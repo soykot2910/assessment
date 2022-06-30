@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Card from "./Card";
 
-const TeamCard = ({ data, activeItem, searchValue }) => {
+const TeamCard = ({ data, activeItem, searchValue, totalData }) => {
   if (searchValue.length > 0) {
     const regex = new RegExp(searchValue?.toLowerCase());
     data = data?.filter((team) => regex.test(team?.name?.toLowerCase()));
@@ -19,7 +19,7 @@ const TeamCard = ({ data, activeItem, searchValue }) => {
           Teams
         </h3>
         <p className="text-sm text-[#7F7F7F]">
-          Showing 65 out of {data.length} teams
+          Showing {totalData} out of {data.length} teams
         </p>
       </div>
       <div className="py-8 px-10 grid lg:grid-cols-3 gap-4">

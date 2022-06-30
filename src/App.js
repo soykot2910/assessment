@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./components/common/Navbar";
-import Sidenav from "./components/common/Sidenav";
-import TeamCard from "./components/common/TeamCard";
-import data from "./utils/data.json";
-import { ActivityCard } from "./components/common/ActivityCard";
-import Header from "./components/common/Header";
+import { ActivityCard } from "./components/ActivityCard";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import Sidenav from "./components/Sidenav";
+import TeamCard from "./components/TeamCard";
 
+import data from './utils/data.json'
 
 const App = () => {
   const [teamsData, setTeamsData] = useState(data.teams);
@@ -44,6 +44,7 @@ const App = () => {
               data={teamsData}
               activeItem={activeItem}
               searchValue={searchValue}
+          totalData={data.teams.length}
             />
             <ActivityCard data={data.activities} />
           </div>
