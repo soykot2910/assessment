@@ -24,7 +24,7 @@ const TeamCard = ({ data, activeItem, searchValue, totalData }) => {
       </div>
       <div className="py-8 px-10 grid lg:grid-cols-3 gap-4">
         {data.length > 0 ? (
-          data.map((item) => <Card key={item.id} item={item} />)
+          data.map((team) => <Card key={team.id} team={team} />)
         ) : (
           <h3 className="text-3xl">No Teams Found</h3>
         )}

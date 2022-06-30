@@ -32,7 +32,7 @@ const Sidenav = () => {
         </li>
       </ul>
 
-      <div className="sidebarItem">
+      <div className="flex items-center justify-center py-8 cursor-pointer ">
         <Help />
       </div>
     </div>

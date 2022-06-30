@@ -1,22 +1,26 @@
 import React from "react";
 import { StarActive, StarDefault } from "./Icons";
 
-const Card = ({ item }) => {
+const Card = ({ team }) => {
   return (
-    <div className="border-[1px] border-[#EFEFEF] rounded-md">
+    <div
+      className={`${
+        team.is_archived && "bg-[#EBEEF2]"
+      } border-[1px] border-[#EFEFEF] rounded-md`}
+    >
       <div className="flex px-6 py-3 justify-between items-center">
         <div className="flex items-center">
-          <img src={item.image} className="h-9 w-9 rounded-md mr-2" />
+          <img src={team.image} className="h-9 w-9 rounded-md mr-2" />
           <div>
-            <h3 className="text-base font-medium text-[#44444]">{item.name}</h3>
+            <h3 className="text-base font-medium text-[#44444]">{team.name}</h3>
             <p className="text-[13px] text-[#565656]">
-              Create{item.created_at}
+              Create{team.created_at}
             </p>
           </div>
         </div>
-        {item.is_favorited ? <StarActive /> : <StarDefault />}
+        {team.is_favorited ? <StarActive /> : <StarDefault />}
       </div>
-      <p className="text-base text-[#565656] px-6 py-3">{item.description}</p>
+      <p className="text-base text-[#565656] px-6 py-3">{team.description}</p>
       <div className="flex justify-between px-6 py-4 border-t-[1px] border-[#EFEFEF]">
         <div className="flex items-center">
           <svg
@@ -35,7 +39,7 @@ const Card = ({ item }) => {
               fill="#000000"
             />
           </svg>
-          <h3 className="ml-2">{item.campaigns_count} Campaigns</h3>
+          <h3 className="ml-2">{team.campaigns_count} Campaigns</h3>
         </div>
         <div className="flex items-center">
           <svg
@@ -54,7 +58,7 @@ const Card = ({ item }) => {
               fill="#000000"
             />
           </svg>
-          <h3 className="ml-2">{item.leads_count} Leads</h3>
+          <h3 className="ml-2">{team.leads_count} Leads</h3>
         </div>
       </div>
     </div>
