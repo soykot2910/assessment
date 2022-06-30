@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { MenuNotification } from "./Icons";
 
-const Navbar = () => {
+const Navbar = ({ userInfo }) => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
@@ -17,53 +18,18 @@ const Navbar = () => {
       <ul className="flex items-center">
         <li className="px-6">
           <a className="relative">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g opacity="0.5">
-                <path
-                  d="M4 11V1H20V11"
-                  stroke="#444444"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M23 15V23H1V15H8V18H16V15H23Z"
-                  stroke="#444444"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                />
-                <path
-                  d="M9 6H15"
-                  stroke="#444444"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                />
-                <path
-                  d="M9 10H15"
-                  stroke="#444444"
-                  stroke-width="2"
-                  stroke-linecap="square"
-                />
-              </g>
-            </svg>
+            <MenuNotification />
             <p className="absolute left-4 -top-3 bg-[#2995DA] h-7 w-7 text-center text-white rounded-full">
-              3
+              {userInfo.notifications_count}
             </p>
           </a>
         </li>
         <li className="px-6">
           <a className="flex items-center">
             {" "}
-            Hello, John
+            Hello, {userInfo.name}
             <img
-              src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+              src={userInfo.avatar}
               className="rounded-full h-9 w-9 ml-2"
               alt=""
             />

@@ -1,10 +1,10 @@
 import React from "react";
-import { Campaigns, Contact, Logo, Reports, Teams } from "./Icons";
+import { Campaigns, Contact, Help, Logo, Reports, Teams } from "./Icons";
 
 const Sidenav = () => {
   return (
-    <div className="w-20 hidden md:block h-full fixed shadow-md bg-[#042235]">
-      <ul className="relative">
+    <div className="w-20 hidden md:flex flex-col justify-between h-full fixed shadow-md bg-[#042235]">
+      <ul>
         <li className="sidebarItem">
           <a href="#">
             <Logo />
@@ -31,6 +31,10 @@ const Sidenav = () => {
           </a>
         </li>
       </ul>
+
+      <div className="sidebarItem">
+        <Help />
+      </div>
     </div>
   );
 };
